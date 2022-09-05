@@ -8,6 +8,10 @@ __pycache__/
 
 .vagrant/
 
+# Datasets
+*.csv
+*.dataset
+
 # Distribution / packaging
 .Python
 build/

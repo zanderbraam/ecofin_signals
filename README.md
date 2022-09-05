@@ -10,3 +10,6 @@ source ./ve/bin/activate
 pip install numpy
 pip install -r requirements.txt
 ```
+
+**Note:** Datasets (in CSV format) are required in the `datasets` directory and will not be hosted in this repository.
+Please procure datasets from your own source.
