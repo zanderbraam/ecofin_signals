@@ -4,9 +4,9 @@ import json
 import numpy as np
 import pandas as pd
 
-from src.utils import get_project_root, is_date
+from utils import get_project_root, is_date
 
-
+# Check for duplicate column names between the different datasets?
 def get_raw_data():
     """
     Fetches raw data from the datasets directory, based on data_config.json
@@ -99,5 +99,19 @@ def get_raw_data():
 
 
 if __name__ == "__main__":
-    test_data = get_raw_data()
-    print(test_data)
+    raw_data = get_raw_data()
+    
+    print(raw_data)
+
+def process_data(raw_data):
+    """
+    Cleans and transforms datasets to the same period (quarterly)
+    
+    :returns: pd.DataFrame 
+    """
+
+
+    print("Done")
+
+
+

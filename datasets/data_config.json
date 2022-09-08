@@ -1,8 +1,8 @@
 {
-    "annual_data": "",
-    "quarterly_data": "",
-    "monthly_data": "",
-    "annual_data_description": "",
-    "quarterly_data_description": "",
-    "monthly_data_description": ""
+    "annual_data": "us_economics_annually.csv",
+    "quarterly_data": "us_economics_quarterly.csv",
+    "monthly_data": "us_economics_monthly.csv",
+    "annual_data_description": "annually_description_file.csv",
+    "quarterly_data_description": "quarterly_description_file.csv",
+    "monthly_data_description": "monthly_description_file.csv"
 }
