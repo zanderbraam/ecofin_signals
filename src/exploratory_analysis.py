@@ -105,7 +105,7 @@ if __name__ == "__main__":
 
 def process_data(raw_data):
     """
-    Cleans and transforms datasets to the same period (quarterly)
+    Cleans and transforms datasets to the same period (quarterly by default)
     
     :returns: pd.DataFrame 
     """
