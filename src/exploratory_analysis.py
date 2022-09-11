@@ -98,6 +98,8 @@ def get_raw_data():
     return data_dict
 
 
+# Check that datasets do not contain cardinal data?
+
 if __name__ == "__main__":
     raw_data = get_raw_data()
     
