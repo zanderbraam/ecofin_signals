@@ -111,9 +111,28 @@ def process_data(raw_data):
     
     :returns: pd.DataFrame 
     """
+    quarterly_ds = pd.concat([raw_data['annual_data'], raw_data['quarterly_data'], raw_data['monthly_data']], axis = 1, join='outer')
+    quarterly_ds = quarterly_ds.resample(rule='Q', label='right').mean().interpolate('linear').ffill()
 
+    threshold = 0.01
+    count = 0
+    for col in quarterly_ds.columns:
+        if quarterly_ds[col].isna().sum()/len(quarterly_ds[col]) > threshold:
+            quarterly_ds.drop(col, axis = 1, inplace=True)
+            count = count + 1
+
+    return quarterly_ds
 
     print("Done")
 
+temp_ds = process_data(raw_data)
+temp_list = list()
+for col in ds:
+    temp_list.append(len(temp_ds[col].dropna()))
 
+sns.scatterplot(x = range(len(ds.columns)), y = temp_list, ax = axes)
+axes.set_ylabel("Amount of observations")
+axes.set_xlabel(ds_name)
+plt.ylabel('Amount of observations')
+plt.xlabel(ds_name)
 
